@@ -18,14 +18,10 @@ export const createElement = <
 	name: N,
 	attrs: PropsWithChildren<any> | null,
 	...children: C
-): Promise<string> extends C[number]
-	? Promise<string>
-	: N extends () => Promise<string>
-	? Promise<string>
-	: string => {
+): JSX.Element => {
 	const { $elysia, ...attr } = attrs ?? {}
 
-	const a = h<C, N>(name, attr, ...children)
+	const a = h(name, attr, ...children)
 
 	return a
 }
