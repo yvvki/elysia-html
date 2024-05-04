@@ -1,4 +1,4 @@
-import { Readable } from 'stream'
+import { Readable } from 'node:stream'
 import { HtmlOptions } from './options'
 import { isHtml, isTagHtml } from './utils'
 
